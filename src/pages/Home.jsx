@@ -23,7 +23,7 @@ class Home extends Component {
   render() {
 
     const rowStyle={
-      paddingTop:'25px'
+      paddingTop:'10px'
     }
 
    
@@ -76,11 +76,10 @@ class Home extends Component {
 
         <div className="container">
           <div className="row" style={rowStyle}>
-          <RowHeader title={'ACERCA'} />
+            <RowHeader title={'ACERCA'} />
             <div className="col l6">
               <div className="container-developer-info">
                   <img class="z-depth-3" style={photoconfig} src={photodev} alt=""/>
-
               <h4 style={devInfoTitle}>¿Quién es ésta persona?</h4>
               <p style={devInfoP}>Soy un programador creativo, es por eso que me especializo en el Diseño atráctico de las páginas web, Soy de Barquisimeto-Venezuela,tengo 3 años como Web Developer y me encanta los retos, ¡Hagamos algo especial!</p>
               </div>

@@ -117,6 +117,7 @@ class Header extends Component {
         <header style={header}>
           <div style={containerContent}>
             <div className="container container-title">
+            <div className="animated fadeInDown">
               <h2>
               Hola, soy <span>Andersson Quintero  </span>.
               </h2>
@@ -130,7 +131,7 @@ class Header extends Component {
                   Ver mi trabajo
                 </a>
               </div>
-
+              </div>
               <div className="footer-header" style={footerHeader}>
                 <ul style={listSocial} className="list-social">
                   <li>

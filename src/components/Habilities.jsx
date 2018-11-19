@@ -3,7 +3,7 @@ import imgRapidez from '../images/funcionamiento.png'
 import imgCreativo from '../images/creatividad.png'
 import imgTeam from '../images/equipo.png'
 import imgDev from '../images/codificacion.png'
-
+import $ from 'jquery'
 
 
 export default class Habilities extends Component {
@@ -14,15 +14,36 @@ export default class Habilities extends Component {
             habilities:[{title:'Rapidez',desc:'Siempre responsable en mis proyectos para una entrega de calidad y a tiempo.',imgSrc:imgRapidez},
             {title:'Creativo',desc:'Haciendo uso de mis habilidades graficas para crear una entrega creativa y unica.',imgSrc:imgCreativo},{title:'Nunca solo',desc:'Ante cualquier proyecto, tengo a la banguardia un grupo de colegas confiables para cualquier meta.',imgSrc:imgTeam},{title:'Debugger Humano',desc:'Analizador, perseverando y muchas ganas para resolver cualquier abversidad que se me presente, encontrando una optima solucion.',imgSrc:imgDev}]
          }
+         this.scrollToBottom=this.scrollToBottom.bind(this);
     }
 
+    scrollToBottom = () => {
+        
+
+        $(document).scroll(function() {
+            if( $(this).scrollTop() >= 400 ) {
+                $('.animated').addClass('fadeInLeft').css("opacity","1");               
+            } 
+        });
+
+    
+      }
+      
+      componentDidMount() {
+        this.scrollToBottom();
+      }
+      
+      componentDidUpdate() {
+        this.scrollToBottom();
+      }
 
   render() {
     const containerHabilities={
       display:'flex',
       flexWrap:'wrap',
       marginTop:'100px',
-      justifyContent:'space-between'
+      justifyContent:'space-between',
+      opacity:0
     }
 
     const childBox={
@@ -50,7 +71,7 @@ export default class Habilities extends Component {
     }
 
     return (
-        <div className="container" style={containerHabilities}>
+        <div className="animated container" style={containerHabilities}>
           
           {
               this.state.habilities.map(habList =>{
