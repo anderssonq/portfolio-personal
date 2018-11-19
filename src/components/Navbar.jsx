@@ -20,8 +20,10 @@ class Navbar extends Component {
         function myFunction() {
             if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");
+                header.classList.add('z-depth-1');
             } else {
                 header.classList.remove("sticky");
+                header.classList.remove('z-depth-1');
             }
         }
 
@@ -48,7 +50,8 @@ class Navbar extends Component {
           color: 'white',
           margin:'0px',
           paddingTop:'10px',
-          textTransform:'uppercase'
+          textTransform:'uppercase',
+          transition:'all 0.4s'
       }
 
       return <div className="navbar" id="navbar" style={navbarStyle}>

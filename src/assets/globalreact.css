@@ -104,3 +104,15 @@ color: white;
 .carousel-slider{
     border-radius: 20px;
 }
+
+.introtitlepage{
+    animation-duration: 3s;
+    animation-delay: 0.3s;
+}
+
+.colizqpi,.colderepi{
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    opacity: 0;
+    transition: all 0.4s;
+}

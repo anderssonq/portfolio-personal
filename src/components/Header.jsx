@@ -117,7 +117,7 @@ class Header extends Component {
         <header style={header}>
           <div style={containerContent}>
             <div className="container container-title">
-            <div className="animated fadeInDown">
+            <div className="animated fadeInDown introtitlepage">
               <h2>
               Hola, soy <span>Andersson Quintero  </span>.
               </h2>

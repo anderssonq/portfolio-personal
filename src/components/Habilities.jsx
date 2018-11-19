@@ -12,21 +12,17 @@ export default class Habilities extends Component {
         super();
          this.state={
             habilities:[{title:'Rapidez',desc:'Siempre responsable en mis proyectos para una entrega de calidad y a tiempo.',imgSrc:imgRapidez},
-            {title:'Creativo',desc:'Haciendo uso de mis habilidades graficas para crear una entrega creativa y unica.',imgSrc:imgCreativo},{title:'Nunca solo',desc:'Ante cualquier proyecto, tengo a la banguardia un grupo de colegas confiables para cualquier meta.',imgSrc:imgTeam},{title:'Debugger Humano',desc:'Analizador, perseverando y muchas ganas para resolver cualquier abversidad que se me presente, encontrando una optima solucion.',imgSrc:imgDev}]
+            {title:'Creativo',desc:'Haciendo uso de mis habilidades graficas para crear una entrega creativa y unica.',imgSrc:imgCreativo},{title:'Nunca solo',desc:'Ante cualquier proyecto, tengo a la banguardia un grupo de colegas confiables para cualquier meta.',imgSrc:imgTeam},{title:'Debugger Humano',desc:'Perseverante con muchas ganas para resolver problemas, encontrando una optima solucion.',imgSrc:imgDev}]
          }
          this.scrollToBottom=this.scrollToBottom.bind(this);
     }
 
     scrollToBottom = () => {
-        
-
         $(document).scroll(function() {
             if( $(this).scrollTop() >= 400 ) {
-                $('.animated').addClass('fadeInLeft').css("opacity","1");               
+                $('.conthabilities').addClass('fadeInLeft').css("opacity","1");               
             } 
         });
-
-    
       }
       
       componentDidMount() {
@@ -71,7 +67,7 @@ export default class Habilities extends Component {
     }
 
     return (
-        <div className="animated container" style={containerHabilities}>
+        <div className="animated conthabilities container" style={containerHabilities}>
           
           {
               this.state.habilities.map(habList =>{
