@@ -19,7 +19,6 @@ class Header extends Component {
         loopCount: Infinity,
         backDelay: 700,
         showCursor: true
-
       };
 
       const type = new Typed(this.el, options);

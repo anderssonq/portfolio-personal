@@ -28,8 +28,6 @@ return (
      <Switch>
         <Route path="/" exact component={IntroPage} />
         <Route path="/es" exact component={Home} />
-
-        
      </Switch>
     </Router >
 );

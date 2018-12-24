@@ -67,23 +67,18 @@ export default class Habilities extends Component {
     }
 
     return (
-        <div className="animated conthabilities container" style={containerHabilities}>
-          
+        <div className="animated conthabilities container" style={containerHabilities}>          
           {
               this.state.habilities.map(habList =>{
-
               return(
                   <div style={childBox}>
-                     <div style={circleHab} className='z-depth-2'>
-                      <img style={imgConfigCircle} src={habList.imgSrc} alt=""/>
-                     </div>
-                        <h4 style={circleTitle}>{habList.title}</h4>
-                        <p>{habList.desc}</p>
-                 </div>
-              )
-          })
-          }
-        
+                    <div style={circleHab} className='z-depth-2'>
+                    <img style={imgConfigCircle} src={habList.imgSrc} alt=""/>
+                  </div>
+                    <h4 style={circleTitle}>{habList.title}</h4>
+                    <p>{habList.desc}</p>
+                 </div>)})
+          }       
         </div>
     )
   }

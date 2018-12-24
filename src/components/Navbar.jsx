@@ -7,13 +7,10 @@ class Navbar extends Component {
 
 
     componentDidMount = () =>{
-
         // When the user scrolls the page, execute myFunction 
         window.onscroll = function () { myFunction() };
-
         // Get the header
         var header = document.getElementById("navbar");
-
         // Get the offset position of the navbar
         var sticky = header.offsetTop;
 
@@ -26,7 +23,6 @@ class Navbar extends Component {
                 header.classList.remove('z-depth-1');
             }
         }
-
     }
 
   render() {
@@ -35,7 +31,7 @@ class Navbar extends Component {
     const navbarStyle={
         background: '#1b242f',
         width:'100%',
-        height:'50px',
+        height:'auto',
         borderBottom:'5px solid #fc4582',
         padding:'0px',
         transition:'all 0.4s',

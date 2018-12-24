@@ -3,8 +3,7 @@ import { DefaultPlayer as Video } from "react-html5video";
 import "react-html5video/dist/styles.css";
 import video from "../media/IntroVideo.mp4";
 import {
-  Link,
-  NavLink
+  Link
 } from 'react-router-dom';
 
 class IntroPage extends Component {
@@ -13,13 +12,13 @@ class IntroPage extends Component {
 
 
     const videoStyle={
-    width: "100%",
-    minWidth: "100%",
-    minHeight: "100%",
-    position: "fixed",
-    right: "0px",
-    bottom: "0px",
-    cursor:"none"
+        width: "100%",
+        minWidth: "100%",
+        minHeight: "100%",
+        position: "fixed",
+        right: "0px",
+        bottom: "0px",
+        cursor:"none"
     }
     const bodyVideo={
         width:'100%',
@@ -49,7 +48,7 @@ class IntroPage extends Component {
               <div className="language-box">
                 <h4>
                   {" "}
-                  <Link to="/es" >Español</Link> /<a> Inglés</a>{" "}
+                  <Link to="/es" >Entrar a la Web</Link>
                 </h4>
               </div>
               </div>
@@ -66,7 +65,6 @@ class IntroPage extends Component {
         
         <Video style={videoStyle} autoPlay loop muted controls={false} onCanPlayThrough={e => {
             e.preventDefault();
-            // Do stuff
           }}>
           <source src={video} type="video/mp4" />
         </Video>

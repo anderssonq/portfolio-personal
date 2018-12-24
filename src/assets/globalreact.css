@@ -116,3 +116,7 @@ color: white;
     opacity: 0;
     transition: all 0.4s;
 }
+
+.contactZone input{
+    color:white;
+}

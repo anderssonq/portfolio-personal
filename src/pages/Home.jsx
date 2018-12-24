@@ -19,6 +19,8 @@ import Navbar from '../components/Navbar'
 import RowHeader from '../components/RowHeader';
 import Habilities from '../components/Habilities'
 import Projects from '../components/Project'
+import Footer from '../components/Footer'
+import { Contact } from '../components/Contact';
 
 class Home extends Component {
   constructor(){
@@ -60,6 +62,8 @@ class Home extends Component {
       { type: "Css3", level: 75 },
       { type: "JavaScript", level: 75 },
       { type: "React", level: 65 },
+      { type: "Angular 7", level: 65 },
+      { type: "Vue Js", level: 45 },
       { type: "Node.js", level: 60 },
       { type: "UI Design", level: 70 },
       { type: "Photoshop", level: 65 },
@@ -88,6 +92,12 @@ class Home extends Component {
 
     const rowBg={
       background: '#F5F5F5'
+    }
+
+    const rowFooterBg={
+      background: 'rgb(27, 36, 47)',
+      marginBottom:'-100px',
+      color:'white'
     }
 
    const photoconfig={
@@ -125,11 +135,26 @@ class Home extends Component {
       <div className="container-bg" style={rowBg}>
         <div className="container">
           <div className="row" style={rowStyle}>
-           <RowHeader title={'PROYECTOS'}/>
+           <RowHeader title={'RECONOCIMIENTOS'}/>
            <Projects/>
         </div>    
         </div>
       </div>
+
+
+        <div className="container">
+          <div className="row" style={rowStyle}>
+           <RowHeader title={'PROYECTOS'}/>
+           <Projects/>
+        </div>    
+        </div>
+
+      <div className="contactZone"  style={rowFooterBg}>
+            <RowHeader title={'PONGAMONOS EN CONTACTO'}/>
+              <Contact/>
+      </div>
+
+      <Footer></Footer>
       </div>;
   }
 }
