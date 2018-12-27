@@ -56,14 +56,14 @@ class IntroPage extends Component {
           </div>
         </div>
 
-        <div class="triangle-container">
+        <div className="triangle-container">
           <svg height="500" width="500">
-            <polygon points="250,60 100,400 400,400" class="triangle" />
+            <polygon points="250,60 100,400 400,400" className="triangle" />
             Sorry, your browser does not support inline SVG.
           </svg>
         </div>
         
-        <Video style={videoStyle} autoPlay loop muted controls={false} onCanPlayThrough={e => {
+        <Video style={videoStyle} autoPlay loop muted  onCanPlayThrough={e => {
             e.preventDefault();
           }}>
           <source src={video} type="video/mp4" />

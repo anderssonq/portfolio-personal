@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-
 export class Contact extends Component {
 
     constructor(){
@@ -36,13 +33,32 @@ export class Contact extends Component {
         marginTop:'100px'
     }
     return (
-      <div class="contactComponent" style={contactContent}>
+      <div className="contactComponent" style={contactContent}>
         <form onSubmit={ this.onSubmitContact}>
-            <input type="text" name="name" id="" onChange={this.onChange}/>
-            <input type="email" name="email" id="" onChange={this.onChange}/>
-            <textarea name="message" id="" cols="30" rows="10" onChange={this.onChange}></textarea>
 
-            <input type="submit" value="Enviar"/>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate"/>
+                        <label for="icon_prefix">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_telephone" type="tel" class="validate"/>
+                        <label for="icon_telephone">Telephone</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                        <label for="textarea2">Textarea</label>
+                    </div>
+
+
+
+                    
+                    <div className="container-button">
+                        <a className="btn btn-large waves-effect waves-teal btnStart">
+                        Enviar mensaje   
+                        </a>
+                    </div>
         </form>
         {/*0412 1452466*/}
       </div>
@@ -50,12 +66,3 @@ export class Contact extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  
-})
-
-const mapDispatchToProps = {
-  
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Contact)

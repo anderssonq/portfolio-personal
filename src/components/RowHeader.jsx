@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import $ from 'jquery'
 
 class RowHeader extends Component {
     constructor(props){

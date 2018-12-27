@@ -135,24 +135,24 @@ class Header extends Component {
                 <ul style={listSocial} className="list-social">
                   <li>
                     <a href="">
-                      <i class="fab fa-gitlab" />
+                      <i className="fab fa-gitlab" />
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <i class="fab fa-linkedin" />
+                      <i className="fab fa-linkedin" />
                     </a>
                   </li> <li>
                     <a href="">
-                    <i class="fab fa-facebook-square"/>
+                    <i className="fab fa-facebook-square"/>
                     </a>
                   </li> <li>
                     <a href="">
-                    <i class="fab fa-instagram" />
+                    <i className="fab fa-instagram" />
                     </a>
                   </li> <li>
                     <a href="">
-                    <i class="fab fa-youtube"/>
+                    <i className="fab fa-youtube"/>
                     </a>
                   </li>
                 </ul>

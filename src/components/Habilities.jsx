@@ -12,7 +12,7 @@ export default class Habilities extends Component {
         super();
          this.state={
             habilities:[{title:'Rapidez',desc:'Siempre responsable en mis proyectos para una entrega de calidad y a tiempo.',imgSrc:imgRapidez},
-            {title:'Creativo',desc:'Haciendo uso de mis habilidades graficas para crear una entrega creativa y unica.',imgSrc:imgCreativo},{title:'Nunca solo',desc:'Ante cualquier proyecto, tengo a la banguardia un grupo de colegas confiables para cualquier meta.',imgSrc:imgTeam},{title:'Debugger Humano',desc:'Perseverante con muchas ganas para resolver problemas, encontrando una optima solucion.',imgSrc:imgDev}]
+            {title:'Creativo',desc:'Haciendo uso de mis habilidades graficas para crear una entrega creativa y unica.',imgSrc:imgCreativo},{title:'Todo en uno',desc:'Ante cualquier proyecto, tengo la destreza necesaria para desarrollar cualquier aplicacion web y cumplir cualquier meta.',imgSrc:imgTeam},{title:'Debugger Humano',desc:'Perseverante con muchas ganas para resolver problemas, encontrando una optima solucion.',imgSrc:imgDev}]
          }
          this.scrollToBottom=this.scrollToBottom.bind(this);
     }
@@ -71,7 +71,7 @@ export default class Habilities extends Component {
           {
               this.state.habilities.map(habList =>{
               return(
-                  <div style={childBox}>
+                  <div style={childBox} key={habList.title}>
                     <div style={circleHab} className='z-depth-2'>
                     <img style={imgConfigCircle} src={habList.imgSrc} alt=""/>
                   </div>
