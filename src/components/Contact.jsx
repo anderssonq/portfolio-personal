@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import logoAnder from '../images/logo.jpg'
 import Mailchimp from 'react-mailchimp-form'
 
 
@@ -40,9 +40,19 @@ export class Contact extends Component {
     const colorwhite={
         color:'white'
     }
+
+    const logoAnderStyle={
+      width:'140px',
+      borderRadius:'60%',
+      border:'solid 2px white',
+      margin:'auto',
+      display:'block',
+      marginTop:'-60px'
+    }
     return (
       <div className="contactComponent" style={contactContent}>
 
+        <img src={logoAnder} style={logoAnderStyle} alt={logoAnder}/>
         <form action="https://facebook.us7.list-manage.com/subscribe/post?u=4880a20f277d76b238c7b2efb&amp;id=4749289fb5" method="post" name="mc-embedded-subscribe-form" novalidate>
 
                     <div class="input-field col s6">
@@ -56,7 +66,7 @@ export class Contact extends Component {
                         <label for="icon_email">Correo electronico</label>
                     </div>
                     <div class="input-field col s12">
-                        <i class="material-icons prefix">dehaze</i>
+                        <i class="material-icons prefix">sms</i>
                         <input id="textarea2" value={this.state.message} type="text" name="MMERGE2"  onChange={ (e)=>{this.setState({message: e.target.value});} } />
                         <label for="textarea2">Mensaje</label>
                     </div>

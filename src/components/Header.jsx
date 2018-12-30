@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Typed from "typed.js";
 import Particles from "react-particles-js";
 import img from "../images/action-blur-close-up-735911.jpg";
-import logoAnder from '../images/logo.jpg'
 
 class Header extends Component {
     constructor(props){
@@ -12,7 +11,7 @@ class Header extends Component {
 
     componentDidMount = () =>{
       const options = {
-        strings: ["Desarrollador Front-End.", "Diseñador Web.", "Desarrollador Full Stack.","UX-UI Diseñador de Interfaces."],
+        strings: ["Programador Front-End.", "Desarrollador Full Stack.","Diseñador UX-UI."],
         typeSpeed: 50,
         backSpeed: 120,
         fadeOut: false,
@@ -112,18 +111,14 @@ class Header extends Component {
         marginTop:'100px'
       }
 
-    const logoAnderStyle={
-      width:'180px',
-      borderRadius:'60%',
-      border:'solid 2px white'
-    }
+
     return <div>
         <header style={header}>
           <div style={containerContent}>
             <div className="container container-title">
             <div className="animated fadeInDown introtitlepage">
               <h2>
-              Hola, soy <span>Andersson Quintero  </span>.
+              Hola, soy <span>Andersson Quintero</span>,
               </h2>
             <h2>Y soy un <span
               style={{ whiteSpace: 'pre' }}
@@ -131,9 +126,6 @@ class Header extends Component {
             /></h2>
 
               <div className="container-button">
-
-              <img src={logoAnder} style={logoAnderStyle} alt={logoAnder}/>
-              <br/>
                 <a className="btn btn-large waves-effect waves-teal btnStart">
                   Ver mi trabajo
                 </a>

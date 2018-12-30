@@ -44,17 +44,18 @@ export default class Recognition extends Component {
 
     const cardStyle={
         width:'250px',
-        height:'350px',
-        marginRight:'40px'
+        height:'350px'
     }
 
     const contentBards={
         display:'flex',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        justifyContent: 'space-around'
     }
 
     const contentDivBards={
         textAlign:'center'
+        
     }
 
     const imgStyle={

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import $ from 'jquery'
 import SkillBar from "react-skillbars";
 import photodev from '../images/foto.jpg'
+import photocasual from '../images/this.jpg'
 import M from 'materialize-css'
 
 
@@ -14,15 +15,15 @@ import Recognition from '../components/Recognition'
 import Footer from '../components/Footer'
 import Projects from '../components/Projects';
 import { Contact } from '../components/Contact';
+import Divider1 from '../components/Divider1'
 
 class Home extends Component {
   constructor(){
     super();
 
     this.scrollToBottom=this.scrollToBottom.bind(this);
+
   }
-
-
 
   scrollToBottom = () => {
     $(document).scroll(function() {
@@ -84,7 +85,8 @@ class Home extends Component {
     }
 
     const rowBg={
-      background: '#F5F5F5'
+      background: '#F5F5F5',
+      marginBottom:'-20px'
     }
 
     const rowFooterBg={
@@ -94,7 +96,7 @@ class Home extends Component {
     }
 
    const photoconfig={
-     width:'60%',
+     width:'80%',
      display:'block',
      textAlign:'center',
      margin:'auto',
@@ -107,16 +109,18 @@ class Home extends Component {
     return <div>
         <Header />
         <Navbar />
+        <a name="inicio"></a>
         <Habilities />
 
         <div className="container">
           <div className="row" style={rowStyle}>
+            <a name="About"></a>
             <RowHeader title={'ACERCA'} />
             <div className="col l6 colizqpi animated" style={configColPI}>
               <div className="container-developer-info">
-                  <img className="z-depth-3" style={photoconfig} src={photodev} alt=""/>
+                  <img className="z-depth-3" style={photoconfig} src={photocasual} alt={photocasual}/>
                   <h4 style={devInfoTitle}>¿Quién es ésta persona?</h4>
-                  <p style={devInfoP}>Soy un programador creativo, es por eso que me especializo en el Diseño atráctico de las páginas web. <br/> Soy de Barquisimeto-Venezuela, tengo 5 años como Desarrollador Web y me encanta los retos, ¡Hagamos algo especial!</p>
+                  <p style={devInfoP}>Soy un programador creativo, es por eso que me especializo en el Diseño atráctico de páginas web. <br/> Soy de Barquisimeto-Venezuela, tengo 5 años como Desarrollador Web y me encanta los retos, <br/> ¡Hagamos algo especial!</p>
               </div>
             </div>
             <div className="col l6 colderepi animated" style={configColPI}>
@@ -126,33 +130,36 @@ class Home extends Component {
 
         </div>
 
-        <div class="skew-c"></div>
-      <div className="container-bg" style={rowBg}>
-      
         <div className="container">
           <div className="row" style={rowStyle}>
-          <RowHeader title={'PROYECTO REALIZADOS'}/>
-      <Projects/>
-        </div>    
+            <a name="Projects"></a>
+            <RowHeader title={'PROYECTO REALIZADOS'}/>
+            <Projects/>
+          </div>
         </div>
-      </div>
 
 
+      <div className="container-bg" style={rowBg}>
         <div className="container">
           <div className="row" style={rowStyle}>
+           <a name="Recognition"></a>
            <RowHeader title={'RECONOCIMIENTOS'}/>
            <Recognition/>
+          </div>    
         </div>    
-        </div>
+      </div>
 
+      <Divider1/>
       <div className="contactZone"  style={rowFooterBg}>
+            <a name="Contact"></a>
       <br/>
             <RowHeader title={'PONGAMONOS EN CONTACTO'}/>
               <Contact/>
       </div>
 
       <Footer/>
-      </div>;
+ 
+      </div>
   }
 }
 

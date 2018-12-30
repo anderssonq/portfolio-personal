@@ -10,7 +10,7 @@ const Footer = () => {
 
         <div className="footer-left">
             <h3>Andersson <span>Quintero</span></h3>
-            <p className="footer-company-name"> Disenador Web profesional</p>
+            <p className="footer-company-name"> Disenador Web Profesional</p>
         </div>
 
         <div className="footer-center">
@@ -21,7 +21,7 @@ const Footer = () => {
 
             <div>
                 <i className="fa fa-phone"></i>
-                <p>+58 4149507357</p>
+                <a href="https://api.whatsapp.com/send?phone=584149507357">+58 4149507357</a>
             </div>
 
             <div>
@@ -33,7 +33,9 @@ const Footer = () => {
         <div className="footer-right">
             <p className="footer-company-about">
                 <span>Portfolio Personal</span>
-                Pagina web creada con React - Derechos reservados &copy; 2018
+                Pagina web creada con React <br/> 
+                Derechos reservados &copy; 2018 <br/>
+                Fotografia Diego Martinez
             </p>
 
             <div className="footer-icons">

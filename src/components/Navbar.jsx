@@ -1,9 +1,23 @@
 import React, { Component } from 'react'
+import $ from 'jquery'
 
 
 class Navbar extends Component {
 
+constructor(props){
+    super(props);
+    this.goToA=this.goToA.bind(this);
+}
 
+
+  goToA=(nameA)=>{
+    $(`a[href^="${nameA}"]`).click(function () {
+      $('html, body').animate({
+          scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+      }, 500);
+      return false;
+  });
+  }
 
 
     componentDidMount = () =>{
@@ -52,10 +66,19 @@ class Navbar extends Component {
 
       return <div className="navbar" id="navbar" style={navbarStyle}>
         <ul style={navbaritems}>
-           <a href=""><li>Inicio</li></a>
-           <a href=""><li>Acerca</li></a>
-           <a href=""><li>Portafolio</li></a>
-           <a href=""><li>Contácto</li></a>
+           <a href="#inicio" onClick={ () =>{
+               this.goToA('#inicio')
+           }}><li>Inicio</li></a>
+           <a href="#About" onClick={ () =>{
+               this.goToA('#About')
+           }}><li>Acerca</li></a>
+           <a href="#Projects" onClick={ () =>{
+               this.goToA('#Projects')
+           }}><li>Portafolio</li></a>
+           <a href="#Contact" onClick={ () =>{
+               this.goToA('#Contact')
+           }}><li>Contácto</li></a>
+           
         </ul>
       </div>;
   }
