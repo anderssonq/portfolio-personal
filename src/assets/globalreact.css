@@ -134,3 +134,11 @@ color: white;
 .slider .slides{
     border-radius:5px !important;
 }
+
+.caption {
+    margin-top: 90px;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #14a6bf;
+}
