@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Typed from "typed.js";
 import Particles from "react-particles-js";
 import img from "../images/action-blur-close-up-735911.jpg";
+import logoAnder from '../images/logo.jpg'
 
 class Header extends Component {
     constructor(props){
@@ -111,7 +112,11 @@ class Header extends Component {
         marginTop:'100px'
       }
 
-    
+    const logoAnderStyle={
+      width:'180px',
+      borderRadius:'60%',
+      border:'solid 2px white'
+    }
     return <div>
         <header style={header}>
           <div style={containerContent}>
@@ -126,6 +131,9 @@ class Header extends Component {
             /></h2>
 
               <div className="container-button">
+
+              <img src={logoAnder} style={logoAnderStyle} alt={logoAnder}/>
+              <br/>
                 <a className="btn btn-large waves-effect waves-teal btnStart">
                   Ver mi trabajo
                 </a>

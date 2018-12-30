@@ -64,7 +64,7 @@ export default class Recognition extends Component {
         <div style={contentDivBards}>
                 <div style={contentBards}>
                 {this.state.recognition.map( recog =>{
-                     return(<div class="card" style={cardStyle}>
+                     return(<div class="card" style={cardStyle} key={recog.cardTitle}>
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src={recog.imgSrc} style={imgStyle}/>
                 </div>
