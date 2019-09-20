@@ -4,8 +4,6 @@ import imgCreativo from '../images/creatividad.png'
 import imgTeam from '../images/equipo.png'
 import imgDev from '../images/codificacion.png'
 import $ from 'jquery'
-import { FormattedMessage,formatMessage } from 'react-intl';
-import {injectIntl} from 'react-intl';
 
 
 
