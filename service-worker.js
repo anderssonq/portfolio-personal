@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/anderssonq/portfolio-personal/precache-manifest.50ef9f067f8f7db7ad4472929d58b4a0.js"
+  "/portfolio-personal/precache-manifest.332fe52621c0e47c66e6af19f55b9913.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/anderssonq/portfolio-personal/index.html", {
+workbox.routing.registerNavigationRoute("/portfolio-personal/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
