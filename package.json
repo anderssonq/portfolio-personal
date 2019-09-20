@@ -13,6 +13,7 @@
     "react-animated-css": "^1.0.4",
     "react-dom": "^16.5.0",
     "react-html5video": "^2.5.1",
+    "react-intl": "^3.3.0",
     "react-mailchimp-form": "^1.0.1",
     "react-modal": "^3.5.1",
     "react-parallax": "^2.0.0",
