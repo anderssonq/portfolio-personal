@@ -16,7 +16,6 @@ import Footer from '../components/Footer'
 import Projects from '../components/Projects';
 import { Contact } from '../components/Contact';
 import Divider1 from '../components/Divider1'
-import { FormattedMessage } from 'react-intl';
 
 class Home extends Component {
   constructor() {

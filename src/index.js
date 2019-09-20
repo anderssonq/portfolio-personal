@@ -1,15 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import { es } from "react-intl/locale-data/es";
-import { en } from "react-intl/locale-data/en";
-import { addLocaleData } from "react-intl";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
 
-addLocaleData(es,en);
+addLocaleData(es, en);
 
-ReactDOM.render
-    (<div>
-            <App />
-    </div>, document.getElementById('root'));
+ReactDOM.render(
+  <div>
+    <App />
+  </div>,
+  document.getElementById("root")
+);
 registerServiceWorker();
