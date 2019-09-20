@@ -3,8 +3,6 @@ import Typed from "typed.js";
 import Particles from "react-particles-js";
 import img from "../images/action-blur-close-up-735911.jpg";
 import $ from 'jquery'
-import Language from './Language'
-import { FormattedMessage } from 'react-intl';
 
 
 class Header extends Component {
@@ -134,29 +132,18 @@ class Header extends Component {
           <div className="container container-title">
             <div className="animated fadeInDown introtitlepage">
               <h2>
-              Hello, I am 
+              Hello, I am &nbsp;
                 <span className="name">
                  Andersson Quintero
                 </span>
               </h2>
               <h2>
-              I am a 
-                <span
+              I am a <br/>
+                 <span
                 style={{ whiteSpace: 'pre' }}
                 ref={(el) => { this.el = el; }}
                 className="name"
               /></h2>
-{/* 
-              <div className="container-button">
-                <a href="#Projects" className="btn btn-large waves-effect waves-teal btnStart"
-                  onClick={() => {
-                    this.goToA('#Projects')
-                  }}
-                >
-                  Ver mi trabajo
-                </a>
-              </div> */}
-          <Language/>
 
             </div>
             <div className="footer-header" style={footerHeader}>
