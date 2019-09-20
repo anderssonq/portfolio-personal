@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import {
-    BrowserRouter as Router,
-    Link,
-    NavLink,
-    Redirect,
-    withRouter,
-    Switch,
-    Route
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from 'react-router-dom';
-import {connect} from 'react-redux'
+import { IntlProvider } from 'react-intl';
+import { connect } from 'react-redux'
+
 
 //style
 import "./assets/globalreact.css";
@@ -16,30 +14,36 @@ import "./assets/globalreact.css";
 import IntroPage from './pages/IntroPage';
 // Pages ES
 import Home from './pages/Home'
+import messages from './messages';
+
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
   }
-  render() {
-  
-return (
-    <Router >
-     <Switch>
-        <Route path="/" exact component={IntroPage} />
-        <Route path="/es" exact component={Home} />
 
-        
-     </Switch>
-    </Router >
-);
+  render() {
+
+    let lang = this.props.lang;
+    return (
+      <IntlProvider locale="en" messages={messages[lang]} defaultLocale="en">
+        <Router >
+          <Switch>
+            <Route path="/" exact component={Home} />
+          </Switch>
+        </Router >
+      </IntlProvider>
+    );
 
 
   }
 }
-
 const mapStateToProps = state => ({
-
+  lang: state.global.lang,
 });
 
-export default connect(mapStateToProps, null)(App);
+
+export default connect(
+  mapStateToProps,
+  null
+)(App);

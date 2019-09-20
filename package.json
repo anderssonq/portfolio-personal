@@ -5,23 +5,26 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
     "express": "^4.16.3",
+    "i18n-react": "^0.6.4",
     "jquery": "^3.3.1",
     "materialize-css": "^1.0.0-rc.2",
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.13",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "nodemailer": "^4.6.8",
     "npm": "^6.4.1",
     "react": "^16.5.0",
     "react-animated-css": "^1.0.4",
     "react-dom": "^16.5.0",
     "react-html5video": "^2.5.1",
+    "react-intl": "^2.8.0",
+    "react-mailchimp-form": "^1.0.1",
     "react-modal": "^3.5.1",
     "react-parallax": "^2.0.0",
     "react-particles-js": "^2.3.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "^2.1.1",
     "react-skillbars": "^1.5.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
@@ -38,5 +41,11 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

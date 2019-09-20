@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
 
 class RowHeader extends Component {
-    constructor(props){
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-
-      const rowTitle = {
-          textAlign: 'center'
-      }
-
-      const h1Title = { fontSize: '38px' }
-
+    const rowTitle = {
+      textAlign: 'center'
+    }
+    const h1Title = { fontSize: '38px' }
     return (
       <div>
-            <div className="row-title" style={rowTitle}>
-                <h1 style={h1Title}>{this.props.title}</h1>
-            </div>
+        <div className="row-title" style={rowTitle}>
+          <h1 style={h1Title}>{this.props.title}</h1>
+        </div>
       </div>
     )
   }

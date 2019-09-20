@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
-import {
-  BrowserRouter as Router,
-  Link,
-  NavLink,
-  Redirect,
-  withRouter,
-  Switch,
-  Route
-} from "react-router-dom";
+import $ from 'jquery'
 import SkillBar from "react-skillbars";
 import photodev from '../images/foto.jpg'
+import photocasual from '../images/this.jpg'
+import M from 'materialize-css'
 
 
 //componentes
@@ -17,26 +11,53 @@ import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import RowHeader from '../components/RowHeader';
 import Habilities from '../components/Habilities'
-import Projects from '../components/Project'
+import Recognition from '../components/Recognition'
+import Footer from '../components/Footer'
+import Projects from '../components/Projects';
+import { Contact } from '../components/Contact';
+import Divider1 from '../components/Divider1'
+import { FormattedMessage } from 'react-intl';
 
 class Home extends Component {
-  render() {
+  constructor() {
+    super();
+    this.scrollToBottom = this.scrollToBottom.bind(this);
+  }
 
-    const rowStyle={
-      paddingTop:'25px'
+  scrollToBottom = () => {
+    $(document).scroll(function () {
+      if ($(this).scrollTop() >= 900) {
+        $('.colizqpi').addClass('slideInLeft').css("opacity", "1");
+        $('.colderepi').addClass('slideInRight').css("opacity", "1");
+      }
+    });
+  }
+
+  componentDidMount() {
+    this.scrollToBottom();
+  }
+
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
+  render() {
+    const rowStyle = {
+      paddingTop: '10px'
     }
 
-   
-
-    const  skills = [
-      { type: "Html5", level: 85 },
-      { type: "Css3", level: 75 },
-      { type: "Javascript", level: 75 },
-      { type: "React", level: 65 },
-      { type: "Node.js", level: 60 },
-      { type: "UI Design", level: 50 },
-      { type: "Photoshop", level: 65 },
+    const skills = [
+      { type: "Html5", level: 95 },
+      { type: "Css3", level: 85 },
+      { type: "Angular 7", level: 85 },
+      { type: "VueJs", level: 90 },
+      { type: "JavaScript", level: 75 },
       { type: "Wordpress", level: 75 },
+      { type: "UI Design", level: 70 },
+      { type: "React", level: 65 },
+      { type: "Photoshop", level: 65 },
+      { type: "UX Design", level: 65 },
+      { type: "Node.js", level: 60 },
     ];
 
     const colors = {
@@ -47,59 +68,91 @@ class Home extends Component {
       }
     }
 
-   
-    const devInfoP={
-      textAlign:'center'
+    const devInfoP = {
+      textAlign: 'center'
     }
 
-    const devInfoTitle={
+    const devInfoTitle = {
       textAlign: 'center',
-      fontSize:'20px',
-      fontWeight:'bold'
+      fontSize: '20px',
+      fontWeight: 'bold'
     }
 
-    const rowBg={
-      background: '#F5F5F5'
+    const rowBg = {
+      background: '#F5F5F5',
+      marginBottom: '-20px'
     }
 
-   const photoconfig={
-     width:'60%',
-     display:'block',
-     textAlign:'center',
-     margin:'auto',
-     borderRadius:'20px'
-   }
+    const rowFooterBg = {
+      background: 'rgb(27, 36, 47)',
+      marginBottom: '-100px',
+      color: 'white'
+    }
+
+    const photoconfig = {
+      width: '80%',
+      display: 'block',
+      textAlign: 'center',
+      margin: 'auto',
+      borderRadius: '20px'
+    }
+
+    const configColPI = {
+      opacity: 0
+    }
     return <div>
-        <Header />
-        <Navbar />
-        <Habilities />
+      <Header />
+      <a name="inicio"></a>
+      <Navbar />
+      <Habilities />
 
-        <div className="container">
-          <div className="row" style={rowStyle}>
-          <RowHeader title={'ACERCA'} />
-            <div className="col l6">
-              <div className="container-developer-info">
-                  <img class="z-depth-3" style={photoconfig} src={photodev} alt=""/>
-
-              <h4 style={devInfoTitle}>¿Quién es ésta persona?</h4>
-              <p style={devInfoP}>Soy un programador creativo, es por eso que me especializo en el Diseño atráctico de las páginas web, Soy de Barquisimeto-Venezuela,tengo 3 años como Web Developer y me encanta los retos, ¡Hagamos algo especial!</p>
-              </div>
-            </div>
-            <div className="col l6">
-              <SkillBar skills={skills} colors={colors} />
+      <a name="About"></a>
+      <div className="container">
+        <div className="row" style={rowStyle}>
+          <RowHeader title={'ABOUT ME'} />
+          <div className="col l6 colizqpi animated" style={configColPI}>
+            <div className="container-developer-info">
+              <img className="z-depth-3" style={photoconfig} src={photocasual} alt={photocasual} />
+              <h4 style={devInfoTitle}>Who is this guy?</h4>
+              <p style={devInfoP}>I am a creative programmer, so I specialize in the design appeal of web pages. I am from Barquisimeto,Venezuela, I am doing this about 5 years ago. I have participated in 24 international projects such as Web Designer, I love the challenges, <br/> Let's do something special!</p>
             </div>
           </div>
-
+          <div className="col l6 colderepi animated" style={configColPI}>
+            <SkillBar skills={skills} colors={colors} />
+          </div>
         </div>
+      </div>
+      <a name="Projects"></a>
+
+      <div className="container">
+        <div className="row" style={rowStyle}>
+          <RowHeader title={'TOP PROYECTS'} />
+          <Projects />
+        </div>
+      </div>
+
+
       <div className="container-bg" style={rowBg}>
         <div className="container">
           <div className="row" style={rowStyle}>
-           <RowHeader title={'PROYECTOS'}/>
-           <Projects/>
-        </div>    
+            <a name="Recognition"></a>
+            <RowHeader title={'ACHIEVEMENTS'} />
+            <Recognition />
+          </div>
         </div>
       </div>
-      </div>;
+
+      <Divider1 />
+      <div className="contactZone" style={rowFooterBg}>
+        <a name="Contact"></a>
+        <br />
+        <RowHeader title={'PONGAMONOS EN CONTACTO'} />
+        <Contact />
+      </div>
+
+      <Footer />
+
+    </div>
   }
 }
 

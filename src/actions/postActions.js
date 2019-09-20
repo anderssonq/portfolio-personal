@@ -1,26 +1,11 @@
 import {
-    ACCESS, SUBNAVBARVIEW, SESIONUSER
+    LANG,
 } from '../actions/types';
 
-export const loginAccess = key => {
+export const changeLang = lang => {
     return {
-        type: ACCESS,
-        get: key
+        type: LANG,
+        get: lang
     }
 }
-
-export const turnOnNavBar = key =>{
-    return{
-        type: SUBNAVBARVIEW,
-        get:key
-    }
-}
-
-export const openSession = person =>{
-    return{
-        type: SESIONUSER,
-        get:person
-    }
-}
-
 
